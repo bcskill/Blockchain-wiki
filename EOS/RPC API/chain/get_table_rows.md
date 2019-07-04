@@ -47,3 +47,17 @@ JSON对象，指定数据表查询条件，其成员如下：
     "more": false
 }
 ```
+
+
+
+#### 备注
+
+对于Table查询,每次只能同时支持一个索引，以及指定索引的位置（index_position）{对于默认缺省的primary_key可不明确指定}，对于缺省的primary_key只支持uint64_t返回类型，所以不用明确指定，对于非primary_key，需要指定返回的类型（key_type），并可指定从哪（lower_bound）到哪（upper_bound）的区间查询，以及可设置分页条数（limit）。
+
+key_type支持以下类型
+
+- uint64_t
+- uint128_t
+- double
+- long double
+- eosio::checksum256
