@@ -44,7 +44,7 @@ JSON对象，指定数据表查询条件，其成员如下：
             "cpu_weight": "0.0147 EOS"
         }
     ],
-    "more": false
+    "more": false // 如果为true的话，说明后面还有其他数据。
 }
 ```
 
